@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+<style>
+canvas {border: 1px solid red;}
+html,body{
+	height:100%;
+	width:100%
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-color :red;
+    border-width: 5px;
+}
+
+.left {
+    left: 0;
+    background-color: lightgrey;
+}
+
+.right {
+    right: 0;
+    /*background-color: red*/;
+    background-color: white;
+   border-color: red;
+}
+
+.sel_right{
+	margin-left:50px;
+
+}
+
+</style>
+<script type="text/javascript" src="sample.js"></script>
+<script type="text/javascript" src="AutoToc_Precision_Recall_page.js"></script>
+</head>
+<body>
+<div class="split left">
+<select id="docs" name="Docs" class="sel_right" onchange = "load_pages()">
+	<option value="" ></option>
+	<option value="39_61_3" >39_61_3</option>
+</select>
+<select class="sel_right" id='hr' onchange = "get_bbox_hr()">
+</select>
+<select class="sel_right" id='vr' onchange = "get_bbox_vr()">
+</select>
+<select class="sel_right" id='hr_vr' onchange = "get_bbox_hr_vr()">
+</select>
+</div>
+<div class="split right" id="rght">
+<div id="show_val_pop_c">
+  <img id="source" src="39_61_3-page-1.png">
+</div>
+</div>
+</body>
+</html>
